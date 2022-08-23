@@ -1,16 +1,26 @@
 # Write your code below this line 👇
-print("Welcome to Tip calculator")
-bill = input("Please enter total bill value\n")
-tip = input("Please enter desired tip rate, suggestions: 15%, 20%, 25%\n")
-size = input ("what is the size of your party?\n")
+height = input("Please enter your height in cm\n")
+heighti = int(height)
 
-billx = float(bill)
-tipx = float (tip)
-sizex = float (size)
+#if lookup buradan sonra basliyor
 
+if heighti >= 120:
+  print("you can use the rollercoster")
+  age = input("Please enter your age\n")
+  agei = int(age)
+  if agei >= 18:
+    bill = 12
+  elif agei >= 12:
+    bill = 7
+  else: 
+    bill = 5
 
-per_value = (billx + billx * (tipx / 100)) / sizex
+  photo = input("do you want photo taken? Y or N ?")
+  if photo == "Y":
+    bill += 3
+    print(f"please pay ${bill}")
 
-per_valuex = round(per_value,2)
-
-print("each person needs to pay" ,per_valuex, "$")
+  else :
+    print(f"please pay ${bill}")
+else: 
+  print("you cannot write - you are too short")
